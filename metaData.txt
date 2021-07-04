@@ -1,0 +1,31 @@
+RF (radio-frequency) readings and magnetic readings of moving vehicles were captured (the visual representation .pdf shows the setup for data collection)
+The recording device was programmed to capture 10,000 RF samples and 2 magnetic samples (a three axis magnetometer was used, therefore each magnetic sample contains 3 values, x, y, and z) per record.
+The raw RF and magnetic data has been processed and added into the dat csv files.
+Fast furior transform (FFT) has been applied to the RF data.
+Magnetic data has been converted into magnitude and angles.
+
+__________________________________________________________________________________________________________________________________________________________
+Contents of the file data.csv;
+Column 0: Mean of Rfs.
+Column 1: Standard deviation of RFs.
+Column 2: Root mean squared of RFs.
+Column 3 to Column 52: Top 50 frequencies of RFs.
+Column 53: Number of frequencies with a higher power than 25% of the frequency with the maximum power.
+Column 54: Time taken to record RFs (in milli seconds).
+Column 55: Recording frequency of RFs(in Hz).
+Column 56: Number of RF samples recorded.
+Column 57: Magnitude of the first magnetic reading.
+Column 58: x-angle of the first magnetic reading.
+Column 59: y-angle of the first magnetic reading.
+Column 60: z-angle of the first magnetic reading.
+Column 61: Magnitude of the second magnetic reading.
+Column 62: x-angle of the second magnetic reading.
+Column 63: y-angle of the second magnetic reading.
+Column 64: z-angle of the second magnetic reading.
+
+Column 65 to Column 76 contains the timestamps for the record (start and end time).
+Start time and date										|	End time and date										|
+Hour		Minute		Second		Day		Month		Year		|	Hour		Minute		Second		Day		Month		Year		|
+Column 65	Column 66	Column 67	Column 68	Column 69	Column 70	| 	Column 71	Column 72	Column 73	Column 74	Column 75	Column 76	|
+
+Column 77: target (1 if vehicle is present in the detection range and 0 if there is no vehicle).
